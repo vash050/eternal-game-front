@@ -33,11 +33,12 @@ export default {
       map.appendChild(app.canvas);
 
       await PIXI.Assets.load('/src/assets/img/map.png');
-      await PIXI.Assets.load('/src/assets/img/knight_1.png');
+      await PIXI.Assets.load('/src/assets/img/knight_2.png');
       const sprite = PIXI.Sprite.from('/src/assets/img/map.png');
       app.stage.addChild(sprite);
 
-      let player = PIXI.Sprite.from('/src/assets/img/knight_1.png');
+      let player = PIXI.Sprite.from('/src/assets/img/knight_2.png');
+      player.scale = .3;
       player.x = this.playerPosX;
       player.y = this.playerPosY;
       app.stage.addChild(player);
@@ -51,7 +52,7 @@ export default {
       //});
 
       app.stage.addEventListener('click', (e) => {
-        console.log(e.global)
+        console.log(e.global);
         // mapMain.position.x = e.global.x;
         // mapMain.position.y = e.global.y;
       });
