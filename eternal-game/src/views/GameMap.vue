@@ -8,8 +8,8 @@ export default {
 
   data() {
     return {
-      //playerPosX: 450,
-      //playerPosY: 250,
+      playerPosX: 100,
+      playerPosY: 100,
       mapX: 0,
       mapY: 0,
     };
@@ -31,8 +31,15 @@ export default {
       map.appendChild(app.canvas);
 
       await PIXI.Assets.load('/src/assets/img/map.png');
+      await PIXI.Assets.load('/src/assets/img/knight_1.png');
       const sprite = PIXI.Sprite.from('/src/assets/img/map.png');
       app.stage.addChild(sprite);
+
+      let player = PIXI.Sprite.from('/src/assets/img/knight_1.png');
+      player.x = this.playerPosX;
+      player.y = this.playerPosY;
+      app.stage.addChild(player);
+
     },
   },
   mounted() {
