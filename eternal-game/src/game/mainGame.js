@@ -1,6 +1,6 @@
-import * as PIXI from 'pixi.js'
-import knight1 from "@/assets/img/knight_1.png";
-import map_1 from "@/assets/img/map.png"
+import * as PIXI from 'pixi.js';
+import knight1 from '@/assets/img/knight_1.png';
+import map_1 from '@/assets/img/map.png';
 
 
 function createMap(x, y) {

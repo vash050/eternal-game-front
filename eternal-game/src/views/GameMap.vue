@@ -1,11 +1,10 @@
 <script>
-import * as PIXI from "pixi.js";
-import map_1 from "@/assets/img/map.png";
+import * as PIXI from 'pixi.js';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
 
-  name: "GameMap",
+  name: 'GameMap',
 
   data() {
     return {
@@ -18,28 +17,21 @@ export default {
 
   methods: {
     async drawPixi() {
-      let canvas = document.getElementById("pixi");
-      let map = document.getElementById("map");
+      const pageCanvas = document.getElementById('pixi');
+      const map = document.getElementById('map');
 
       const app = new PIXI.Application();
       await app.init({
-        background: "#fff",
+        background: '#fff',
         width: 500,
         height: 500,
-        view: canvas,
+        canvas: pageCanvas,
       });
 
       map.appendChild(app.canvas);
 
-      const container = new PIXI.Container({
-        x: app.screen.width / 2,
-        y: app.screen.height / 2,
-      });
-
-      //const mapMain = createMap(this.mapX, this.mapY);
-      // app.stage.addChild(container);
       await PIXI.Assets.load('/src/assets/img/map.png');
-      let sprite = PIXI.Sprite.from('/src/assets/img/map.png');
+      const sprite = PIXI.Sprite.from('/src/assets/img/map.png');
       app.stage.addChild(sprite);
     },
   },
@@ -50,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <div class="MapApp" id="map">
-    <canvas id="pixi"></canvas>
-  </div>
+	<div class="MapApp" id="map">
+		<canvas id="pixi"></canvas>
+	</div>
 </template>
