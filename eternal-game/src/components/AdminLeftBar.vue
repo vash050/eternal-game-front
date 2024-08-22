@@ -32,7 +32,7 @@ export default {
             <div class="px-8">{{ el.direction }}</div>
             <div class="pl-2">
               <button>
-                <RouterLink :to="{ path: 'admin/data-page' }"
+                <RouterLink :to="{ path: '/admin/data-page' }"
                   >редактировать</RouterLink
                 >
               </button>
