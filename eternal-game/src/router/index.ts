@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import GameView from '@/views/GameView.vue'
-import GameMap from '@/views/GameMap.vue'
-import UnitData from '@/views/UnitData.vue'
-import TroopData from '@/views/TroopData.vue'
-import AdminPageDataView from '@/views/AdminPageDataView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import GameMap from '@/views/GameMap.vue';
+import GameView from '@/views/GameView.vue';
+import UnitData from '@/views/UnitData.vue';
+import TroopData from '@/views/TroopData.vue';
+import AdminPageDataView from '@/views/AdminPageDataView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
