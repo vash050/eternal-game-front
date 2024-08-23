@@ -23,7 +23,7 @@ const router = createRouter({
       name: 'admin',
       component: () => import('../views/AdminView.vue'),
       children: [
-        { path: 'data-page', component: AdminPageDataView },
+        { path: 'data-page/:el', name: 'page-skills', component: AdminPageDataView},
       ]
     },
   ]

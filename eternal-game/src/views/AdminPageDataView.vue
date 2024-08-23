@@ -1,5 +1,8 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
-страница характеристики
+	страница характеристики
+	{{ $route.params.el }}
 </template>
