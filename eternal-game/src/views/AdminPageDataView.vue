@@ -46,22 +46,27 @@ export default {
 </script>
 
 <template>
-	<div>
+	<div class="container">
 		<h1>Административная страница</h1>
 		<hr>
-		<h3>параметр: {{ all_data }}</h3>
-		<div>
-			<div class="col-span-3 flex justify-between">
-				<button>
-					Редактировать
-				</button>
-				<button>
-					Создать
-				</button>
-				<button>
-					Просмотреть
-				</button>
+		<div class="">
+			<div class="" v-for="item in all_data" :key="item.id">
+				<div class="flex grid-rows-6 justify-between">
+					<p class="text-sm">{{ item.name }}</p>
+					<p class="text-sm">{{ item.description }}</p>
+
+					<button class="bg-indigo-500 text-xs border-2 border-black rounded-full">
+						Редактировать
+					</button>
+					<button class="bg-red-500 text-xs border-2  rounded-full border-black">
+						Удалить
+					</button>
+				</div>
+				<hr/>
 			</div>
 		</div>
+		<button class="bg-indigo-500 text-xs border-2 border-black  rounded-full">
+			Создать
+		</button>
 	</div>
 </template>
