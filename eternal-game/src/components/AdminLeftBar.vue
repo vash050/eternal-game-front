@@ -6,8 +6,8 @@ export default {
   data() {
     return {
       listParamers: [
-        {name: 'race', description: 'race unit', name_ob: 'race'},
-        {name: 'grade', description: 'general grade', name_ob: 'grade'},
+        {name: 'race', description: 'race unit', name_ob: 'units/race/races'},
+        {name: 'grade', description: 'general grade', name_ob: 'general/grade/grades'},
       ],
     };
   },

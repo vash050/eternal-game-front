@@ -25,7 +25,8 @@ export default {
   methods: {
     async getAllDate() {
       const env = this;
-      await axios.get('http://0.0.0.0:8000/api/v1/units/race/races', {
+      const link = 'http://0.0.0.0:8000/api/v1/' + this.el;
+      await axios.get(link, {
         headers: {
           'Content-Type': 'application/json',
         },
