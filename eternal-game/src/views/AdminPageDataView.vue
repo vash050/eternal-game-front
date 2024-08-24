@@ -6,13 +6,15 @@ export default {
   name: 'AdminPageData',
   data() {
     return {
-      el: 'units/race/races',
+      el: '',
       all_data: [],
     };
   },
 
   // TODO: исправить первую загрузку
   created() {
+    this.el = this.$route.params.el;
+    this.getAllDate();
     this.$watch(
         () => this.$route.params.el,
         (newEl, oldEl) => {
